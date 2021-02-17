@@ -13,9 +13,9 @@ Si desea consultar una ciudad diferente cambie el nombre /clima?lugar="ciudad"
 * [https://murmuring-hamlet-47970.herokuapp.com/clima?lugar=Bogota](https://murmuring-hamlet-47970.herokuapp.com/clima?lugar=Bogota)
 ##Cache
 ### Para conocer las ciudades ya consultadas 
-* [https://murmuring-hamlet-47970.herokuapp.com/cache] (https://murmuring-hamlet-47970.herokuapp.com/cache) 
+* [Cache] (https://murmuring-hamlet-47970.herokuapp.com/cache) 
 ### Para limpiar el Cache
-* [https://murmuring-hamlet-47970.herokuapp.com/borrar] (https://murmuring-hamlet-47970.herokuapp.com/borrar)
+* [Borrar] (https://murmuring-hamlet-47970.herokuapp.com/borrar)
 
 ## Licencia
 
