@@ -17,4 +17,7 @@ public class Cache {
     public ArrayList<String> getCache(){
         return Ciudades;
     }
+    public void limpiar(){
+        Ciudades.clear();
+    }
 }

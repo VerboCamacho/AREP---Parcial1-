@@ -25,6 +25,7 @@ public class Clima<Static>
         port(getPort());
         get("/clima",(req, res)-> Datos(req, res));
         get("/cache",(req, res)-> PAg(req,res));
+        get("/borrar",(req, res)-> Borr(req,res));
 
 
     }
@@ -78,6 +79,16 @@ public class Clima<Static>
                 + "</body>\n"
                 + "</html>";
         return PAg;
+    }
+    private static String Borr(Request req, Response res) throws IOException{
+        reservada.limpiar();
+        String result = "<!DOCTYPE html>\n"
+                + "<html>\n"
+                + "<body>"
+                + "<h2>cache limpiada con exito</h2>"
+                + "</body>\n"
+                + "</html>";
+        return result;
     }
     public static void agregar(String ciu){
         reservada.cache(ciu);
