@@ -12,6 +12,7 @@ import java.io.InputStreamReader;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
+import java.util.Map;
 
 
 /**
@@ -23,7 +24,7 @@ public class Clima
 
     public static void main(String[] args) throws Exception {
         port(getPort());
-        get("/lugar=",(req, res)-> Datos(req, res));
+        get("/",(req, res)-> Datos(req, res));
 
 
     }
@@ -36,9 +37,14 @@ public class Clima
         }
         return 37000;
     }
-    private static <ReadFileC> Object Datos(Request req, Response res) throws MalformedURLException {
+    private static  Object Datos(Request req, Response res) throws MalformedURLException {
+        String pr=req.queryString();
+        //System.out.println(req.queryString());
+        String[] inPut = pr.split("=");
+
+        //System.out.println(variable.get("lugar"));
         String KEY="e3df546e99009f7020bcdb8239929f42";
-        String city="bogota";
+        String city=inPut[1];
         String urlString="https://api.openweathermap.org/data/2.5/weather?q="+city+"&appid="+KEY;
         try{
             StringBuilder result= new StringBuilder();
@@ -50,7 +56,7 @@ public class Clima
                 result.append(line);
             }
             rd.close();
-            System.out.println(result);
+            //System.out.println(result);
 
 
             String resultado = ("<!DOCTYPE html>"
