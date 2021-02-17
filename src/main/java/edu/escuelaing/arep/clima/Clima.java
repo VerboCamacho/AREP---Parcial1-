@@ -4,15 +4,16 @@ package edu.escuelaing.arep.clima;
 
 import spark.Request;
 import spark.Response;
+import static spark.Spark.port;
 
-import static spark.Spark.*;
+import static spark.Spark.get;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
-import java.util.Map;
+import java.util.ArrayList;
 
 
 /**
@@ -23,20 +24,13 @@ public class Clima
 {
 
     public static void main(String[] args) throws Exception {
-        port(getPort());
-        get("/",(req, res)-> Datos(req, res));
+       port(getPort());
+       get("/",(req, res)-> Datos(req, res));
+
 
 
     }
-    /**
-     * @return the port 37000
-     */
-    public static int getPort(){
-        if (System.getenv("PORT") != null) {
-            return Integer.parseInt(System.getenv("PORT"));
-        }
-        return 37000;
-    }
+
     private static  Object Datos(Request req, Response res) throws MalformedURLException {
         String pr=req.queryString();
         //System.out.println(req.queryString());
@@ -71,11 +65,23 @@ public class Clima
         } catch (IOException e) {
             return "";
         }
-
-
+        /**
+         * @return the port 37000
+         */
 
 
 
         }
+        public void cache(String ciudad){
+            String[] ciudades = new String[0];
+        }
+
+    public static int getPort(){
+        if (System.getenv("PORT") != null) {
+            return Integer.parseInt(System.getenv("PORT"));
+        }
+        return 37000;
+    }
+
 
 }
