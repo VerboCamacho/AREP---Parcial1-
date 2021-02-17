@@ -8,7 +8,6 @@
 Verbo Julian Camacho Villamarin
 
 ## Herramientas
-
 * [Intellij IDEA](https://www.jetbrains.com/es-es/idea/) - IDLE
 * [Maven](https://maven.apache.org/) - Dependency Management
 * [Github](https://github.com/VerboCamacho/AREP-TallerMvnGit) - Repository
